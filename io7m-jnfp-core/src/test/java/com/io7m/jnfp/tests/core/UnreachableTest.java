@@ -14,7 +14,7 @@
  * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package com.io7m.junsigned.tests.core;
+package com.io7m.jnfp.tests.core;
 
 import com.io7m.junreachable.UnreachableCodeException;
 import org.junit.Test;
@@ -70,5 +70,37 @@ public final class UnreachableTest
   {
     UnreachableTest.execNoArgPrivateConstructor(
       "com.io7m.jnfp.core.NFPUnsignedDoubleLong");
+  }
+
+  @Test(expected = UnreachableCodeException.class)
+  public void testNFPSignedFloatInt()
+    throws Exception
+  {
+    UnreachableTest.execNoArgPrivateConstructor(
+      "com.io7m.jnfp.core.NFPSignedFloatInt");
+  }
+
+  @Test(expected = UnreachableCodeException.class)
+  public void testNFPSignedFloatLong()
+    throws Exception
+  {
+    UnreachableTest.execNoArgPrivateConstructor(
+      "com.io7m.jnfp.core.NFPSignedFloatLong");
+  }
+
+  @Test(expected = UnreachableCodeException.class)
+  public void testNFPSignedDoubleInt()
+    throws Exception
+  {
+    UnreachableTest.execNoArgPrivateConstructor(
+      "com.io7m.jnfp.core.NFPSignedDoubleInt");
+  }
+
+  @Test(expected = UnreachableCodeException.class)
+  public void testNFPSignedDoubleLong()
+    throws Exception
+  {
+    UnreachableTest.execNoArgPrivateConstructor(
+      "com.io7m.jnfp.core.NFPSignedDoubleLong");
   }
 }
