@@ -19,6 +19,7 @@
       <ul>
         <li>Conversion between unsigned normalized fixed-point numbers and floating point numbers.</li>
         <li>Conversion between signed normalized fixed-point numbers and floating point numbers.</li>
+        <li>Machine-generated specializations of methods to reduce conversions down to a single multiply or divide in most cases.</li>
         <li>100% unit test coverage.</li>
         <li>ISC license.</li>
       </ul>

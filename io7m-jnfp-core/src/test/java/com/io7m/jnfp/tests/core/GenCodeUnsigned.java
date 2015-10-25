@@ -25,14 +25,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
 
-public final class GenCode
+public final class GenCodeUnsigned
 {
   private static ST getStringTemplate(final String name)
   {
     try {
       final ByteArrayOutputStream bao = new ByteArrayOutputStream(8192);
       final byte[] data = new byte[8192];
-      try (final InputStream s = GenCode.class.getResourceAsStream(name)) {
+      try (final InputStream s = GenCodeUnsigned.class.getResourceAsStream(name)) {
         for (; ; ) {
           final int r = s.read(data);
           if (r == -1) {
@@ -105,7 +105,7 @@ public final class GenCode
     System.out.printf("static {\n");
 
     for (int e = 2; e <= 64; ++e) {
-      GenCode.makeConstantInt(e);
+      GenCodeUnsigned.makeConstantInt(e);
     }
 
     System.out.printf("}\n");
@@ -122,7 +122,7 @@ public final class GenCode
     System.out.printf("static {\n");
 
     for (int e = 2; e <= 32; ++e) {
-      GenCode.makeConstantFloat(e);
+      GenCodeUnsigned.makeConstantFloat(e);
     }
 
     System.out.printf("}\n");
@@ -131,7 +131,7 @@ public final class GenCode
   @Test public void makeFloatIntCode()
   {
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "toUnsignedNormalized_FloatInt.st");
 
       for (int e = 2; e <= 32; ++e) {
@@ -142,7 +142,7 @@ public final class GenCode
     }
 
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "fromUnsignedNormalized_FloatInt.st");
 
       for (int e = 2; e <= 32; ++e) {
@@ -155,8 +155,8 @@ public final class GenCode
 
   @Test public void makeFloatIntTest()
   {
-    final ST st = GenCode.getStringTemplate(
-      "test_FloatInt.st");
+    final ST st = GenCodeUnsigned.getStringTemplate(
+      "test_UnsignedFloatInt.st");
 
     for (int e = 2; e <= 32; ++e) {
       st.remove("bits");
@@ -176,7 +176,7 @@ public final class GenCode
     System.out.printf("static {\n");
 
     for (int e = 2; e <= 64; ++e) {
-      GenCode.makeConstantFloat(e);
+      GenCodeUnsigned.makeConstantFloat(e);
     }
 
     System.out.printf("}\n");
@@ -185,7 +185,7 @@ public final class GenCode
   @Test public void makeFloatLongCode()
   {
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "toUnsignedNormalized_FloatLong.st");
 
       for (int e = 2; e <= 64; ++e) {
@@ -196,7 +196,7 @@ public final class GenCode
     }
 
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "fromUnsignedNormalized_FloatLong.st");
 
       for (int e = 2; e <= 64; ++e) {
@@ -209,8 +209,8 @@ public final class GenCode
 
   @Test public void makeFloatLongTest()
   {
-    final ST st = GenCode.getStringTemplate(
-      "test_FloatLong.st");
+    final ST st = GenCodeUnsigned.getStringTemplate(
+      "test_UnsignedFloatLong.st");
 
     for (int e = 2; e <= 64; ++e) {
       st.remove("bits");
@@ -230,7 +230,7 @@ public final class GenCode
     System.out.printf("static {\n");
 
     for (int e = 2; e <= 32; ++e) {
-      GenCode.makeConstantDouble(e);
+      GenCodeUnsigned.makeConstantDouble(e);
     }
 
     System.out.printf("}\n");
@@ -239,7 +239,7 @@ public final class GenCode
   @Test public void makeDoubleIntCode()
   {
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "toUnsignedNormalized_DoubleInt.st");
 
       for (int e = 2; e <= 32; ++e) {
@@ -250,7 +250,7 @@ public final class GenCode
     }
 
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "fromUnsignedNormalized_DoubleInt.st");
 
       for (int e = 2; e <= 32; ++e) {
@@ -263,8 +263,8 @@ public final class GenCode
 
   @Test public void makeDoubleIntTest()
   {
-    final ST st = GenCode.getStringTemplate(
-      "test_DoubleInt.st");
+    final ST st = GenCodeUnsigned.getStringTemplate(
+      "test_UnsignedDoubleInt.st");
 
     for (int e = 2; e <= 32; ++e) {
       st.remove("bits");
@@ -284,7 +284,7 @@ public final class GenCode
     System.out.printf("static {\n");
 
     for (int e = 2; e <= 64; ++e) {
-      GenCode.makeConstantDouble(e);
+      GenCodeUnsigned.makeConstantDouble(e);
     }
 
     System.out.printf("}\n");
@@ -293,7 +293,7 @@ public final class GenCode
   @Test public void makeDoubleLongCode()
   {
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "toUnsignedNormalized_DoubleLong.st");
 
       for (int e = 2; e <= 64; ++e) {
@@ -304,7 +304,7 @@ public final class GenCode
     }
 
     {
-      final ST st = GenCode.getStringTemplate(
+      final ST st = GenCodeUnsigned.getStringTemplate(
         "fromUnsignedNormalized_DoubleLong.st");
 
       for (int e = 2; e <= 64; ++e) {
@@ -317,8 +317,8 @@ public final class GenCode
 
   @Test public void makeDoubleLongTest()
   {
-    final ST st = GenCode.getStringTemplate(
-      "test_DoubleLong.st");
+    final ST st = GenCodeUnsigned.getStringTemplate(
+      "test_UnsignedDoubleLong.st");
 
     for (int e = 2; e <= 64; ++e) {
       st.remove("bits");

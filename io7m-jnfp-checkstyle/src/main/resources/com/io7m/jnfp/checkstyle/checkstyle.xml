@@ -132,11 +132,9 @@
     <module name="MemberName">
       <property name="format" value="^[a-z][a-z0-9_]*$"/>
     </module>
-    <module name="MethodCount">
-      <property name="maxPublic" value="250"/>
-      <property name="maxTotal" value="250"/>
-      <property name="maxPackage" value="250"/>
-    </module>
+    <!--
+    <module name="MethodCount"/>
+    -->
     <module name="MethodName">
       <property name="format" value="^[a-z][A-Za-z0-9_]*$"/>
     </module>
@@ -219,9 +217,9 @@
     <module name="WhitespaceAround"/>
   </module>
 
-  <module name="FileLength">
-    <property name="max" value="2000"/>
-  </module>
+  <!--
+  <module name="FileLength"/>
+  -->
 
   <module name="FileTabCharacter"/>
   <module name="JavadocPackage"/>
