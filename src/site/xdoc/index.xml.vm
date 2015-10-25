@@ -18,6 +18,7 @@
     <subsection name="Features">
       <ul>
         <li>Conversion between unsigned normalized fixed-point numbers and floating point numbers.</li>
+        <li>Conversion between signed normalized fixed-point numbers and floating point numbers.</li>
         <li>100% unit test coverage.</li>
         <li>ISC license.</li>
       </ul>
