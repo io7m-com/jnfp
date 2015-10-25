@@ -32,7 +32,7 @@
         <s:subsection-title>Overview</s:subsection-title>
         <s:paragraph>
           The <s:term s:type="package">io7m-jnfp</s:term>
-          provides Java functions for processing normalized fixed-point
+          package provides Java functions for processing normalized fixed-point
           values.
         </s:paragraph>
       </s:subsection>
