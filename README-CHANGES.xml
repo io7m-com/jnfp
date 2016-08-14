@@ -3,6 +3,16 @@
   <c:project>io7m-jnfp</c:project>
 
   <c:release c:ticket-system="com.github.io7m.jnfp">
+    <c:date>2016-08-14</c:date>
+    <c:version>0.1.1</c:version>
+    <c:item>
+      <c:date>2016-08-14</c:date>
+      <c:type-code-fix/>
+      <c:summary>Update Maven plugins.</c:summary>
+    </c:item>
+  </c:release>
+
+  <c:release c:ticket-system="com.github.io7m.jnfp">
     <c:date>2015-10-24</c:date>
     <c:version>0.1.0</c:version>
     <c:item>
