@@ -10,6 +10,11 @@
       <c:type-code-fix/>
       <c:summary>Update Maven plugins.</c:summary>
     </c:item>
+    <c:item>
+      <c:date>2016-08-14</c:date>
+      <c:type-code-fix/>
+      <c:summary>The produced jar is now an OSGi bundle.</c:summary>
+    </c:item>
   </c:release>
 
   <c:release c:ticket-system="com.github.io7m.jnfp">
