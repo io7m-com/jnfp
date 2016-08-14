@@ -7,7 +7,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.io7m.jnfp</groupId>
   <artifactId>io7m-jnfp</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 
   <packaging>pom</packaging>
   <name>io7m-jnfp</name>
