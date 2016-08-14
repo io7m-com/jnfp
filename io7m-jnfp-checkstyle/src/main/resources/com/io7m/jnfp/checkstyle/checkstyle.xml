@@ -31,8 +31,8 @@
     <!-- Required to use the SuppressionCommentFilter above -->
     <module name="FileContentsHolder"/>
 
-    <module name="AbstractClassName"/>
     <!--
+    <module name="AbstractClassName"/>
     <module name="AnnotationUseStyle"/>
     -->
 
@@ -132,9 +132,11 @@
     <module name="MemberName">
       <property name="format" value="^[a-z][a-z0-9_]*$"/>
     </module>
-    <!--
-    <module name="MethodCount"/>
-    -->
+    <module name="MethodCount">
+      <property name="maxPublic" value="260"/>
+      <property name="maxTotal" value="260"/>
+      <property name="maxPackage" value="260"/>
+    </module>
     <module name="MethodName">
       <property name="format" value="^[a-z][A-Za-z0-9_]*$"/>
     </module>
@@ -183,7 +185,6 @@
     <module name="ParenPad"/>
     <module name="RedundantImport"/>
     <module name="RedundantModifier"/>
-    <module name="RedundantThrows"/>
     <module name="RequireThis"/>
     <module name="SimplifyBooleanExpression"/>
     <module name="SimplifyBooleanReturn"/>
@@ -191,7 +192,6 @@
       <property name="format" value="^[A-Z][_A-Z0-9]*$"/>
     </module>
     <module name="StringLiteralEquality"/>
-
     <!--
     <module name="TrailingComment"/>
     -->
@@ -209,7 +209,11 @@
     </module>
 
     <module name="TypecastParenPad"/>
-    <module name="UncommentedMain"/>
+
+    <module name="UncommentedMain">
+      <property name="excludedClasses" value="Main$"/>
+    </module>
+
     <module name="UnusedImports"/>
     <module name="UpperEll"/>
     <module name="VisibilityModifier"/>
@@ -217,9 +221,9 @@
     <module name="WhitespaceAround"/>
   </module>
 
-  <!--
-  <module name="FileLength"/>
-  -->
+  <module name="FileLength">
+    <property name="max" value="5000"/>
+  </module>
 
   <module name="FileTabCharacter"/>
   <module name="JavadocPackage"/>

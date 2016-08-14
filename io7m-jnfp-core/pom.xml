@@ -8,11 +8,11 @@
   <parent>
     <groupId>com.io7m.jnfp</groupId>
     <artifactId>io7m-jnfp</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
   </parent>
   <artifactId>io7m-jnfp-core</artifactId>
 
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <name>io7m-jnfp-core</name>
   <description>Normalized fixed-point (Core)</description>
   <url>http://io7m.github.io/jnfp/</url>
@@ -55,6 +55,20 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+
+      <!-- Produce OSGi bundle -->
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>
+              com.io7m.jnfp.core
+            </Export-Package>
+          </instructions>
+        </configuration>
       </plugin>
     </plugins>
   </build>
