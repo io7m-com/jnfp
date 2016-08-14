@@ -90,7 +90,7 @@
       <dependency>
         <groupId>com.io7m.junsigned</groupId>
         <artifactId>io7m-junsigned-core</artifactId>
-        <version>0.1.0</version>
+        <version>0.2.1</version>
       </dependency>
 
       <dependency>
