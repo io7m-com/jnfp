@@ -23,8 +23,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <siteReposDirectory>/com/io7m/jnfp</siteReposDirectory>
-    <siteDocumentationDirectory>/com/io7m/jnfp/io7m-jnfp-documentation</siteDocumentationDirectory>
+    <siteReposDirectory>com/io7m/jnfp</siteReposDirectory>
+    <siteDocumentationDirectory>com/io7m/jnfp/io7m-jnfp-documentation</siteDocumentationDirectory>
   </properties>
 
   <licenses>
