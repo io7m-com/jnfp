@@ -7,13 +7,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.io7m.jnfp</groupId>
-    <artifactId>io7m-jnfp</artifactId>
+    <artifactId>com.io7m.jnfp</artifactId>
     <version>0.1.1</version>
   </parent>
-  <artifactId>io7m-jnfp-checkstyle</artifactId>
+  <artifactId>com.io7m.jnfp.checkstyle</artifactId>
 
   <packaging>jar</packaging>
-  <name>io7m-jnfp-checkstyle</name>
+  <name>com.io7m.jnfp.checkstyle</name>
   <description>Normalized fixed-point (Checkstyle policy)</description>
   <url>http://io7m.github.io/jnfp/</url>
 
@@ -26,7 +26,7 @@
   <dependencies>
     <dependency>
       <groupId>com.io7m.jnull</groupId>
-      <artifactId>io7m-jnull-core</artifactId>
+      <artifactId>com.io7m.jnull.core</artifactId>
     </dependency>
   </dependencies>
 
