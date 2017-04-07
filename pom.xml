@@ -13,7 +13,7 @@
 
   <groupId>com.io7m.jnfp</groupId>
   <artifactId>com.io7m.jnfp</artifactId>
-  <version>0.1.1</version>
+  <version>0.1.2</version>
 
   <packaging>pom</packaging>
   <name>com.io7m.jnfp</name>
