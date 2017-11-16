@@ -18,5 +18,5 @@
  * Documentation.
  */
 
-@com.io7m.jnull.NonNullByDefault package com.io7m.jnfp.documentation;
+package com.io7m.jnfp.documentation;
 
