@@ -15,8 +15,13 @@
  */
 
 /**
- * Documentation.
+ * Normalized fixed-point (Core)
  */
 
-package com.io7m.jnfp.documentation;
+module com.io7m.jnfp.core
+{
+  requires com.io7m.junreachable.core;
+  requires com.io7m.junsigned.core;
 
+  exports com.io7m.jnfp.core;
+}
