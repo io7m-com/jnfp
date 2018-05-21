@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.jnfp">
+<?xml version="1.0" encoding="UTF-8"?><c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.jnfp">
   <c:releases>
     <c:release date="2015-10-24T00:00:00+00:00" ticket-system="com.github.io7m.jnfp" version="0.1.0">
       <c:changes>
@@ -17,10 +16,15 @@
         <c:change compatible="false" date="2017-04-07T00:00:00+00:00" summary="Rename project. Use primogenitor, renaming all modules to the new OSGi conventions."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-11-16T15:08:54+00:00" ticket-system="com.github.io7m.jnfp" version="1.0.0">
+    <c:release date="2017-11-16T00:00:00+00:00" ticket-system="com.github.io7m.jnfp" version="1.0.0">
       <c:changes>
         <c:change compatible="false" date="2017-11-16T00:00:00+00:00" summary="All modules are now Java 9 modules. JDK 9 is now required."/>
-        <c:change compatible="false" date="2017-11-16T15:08:54+00:00" summary="Removed dependency on com.io7m.jnull."/>
+        <c:change compatible="false" date="2017-11-16T00:00:00+00:00" summary="Removed dependency on com.io7m.jnull."/>
+      </c:changes>
+    </c:release>
+    <c:release date="2018-05-21T10:47:13+00:00" ticket-system="com.github.io7m.jnfp" version="2.0.0">
+      <c:changes>
+        <c:change compatible="false" date="2018-05-21T10:47:13+00:00" summary="Remove specialized methods; these are no longer needed with modern JIT compilers"/>
       </c:changes>
     </c:release>
   </c:releases>
