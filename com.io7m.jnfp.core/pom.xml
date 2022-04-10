@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
@@ -8,14 +9,14 @@
   <parent>
     <groupId>com.io7m.jnfp</groupId>
     <artifactId>com.io7m.jnfp</artifactId>
-    <version>1.0.0</version>
+    <version>3.0.0</version>
   </parent>
   <artifactId>com.io7m.jnfp.core</artifactId>
 
-  <packaging>bundle</packaging>
+  <packaging>jar</packaging>
   <name>com.io7m.jnfp.core</name>
   <description>Normalized fixed-point (Core)</description>
-  <url>http://io7m.github.io/jnfp/</url>
+  <url>https://www.io7m.com/software/jnfp</url>
 
   <dependencies>
     <dependency>
@@ -25,6 +26,17 @@
     <dependency>
       <groupId>com.io7m.junsigned</groupId>
       <artifactId>com.io7m.junsigned.core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.bundle</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.versioning</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -41,30 +53,23 @@
 
   <build>
     <plugins>
-      <!-- Check style -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-      </plugin>
-
-      <!-- Produce OSGi bundle -->
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Export-Package>
-              com.io7m.jnfp.core
-            </Export-Package>
-          </instructions>
-        </configuration>
-      </plugin>
-
       <!-- Determine test coverage -->
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+
+      <!-- Ignore dependencies that bytecode analysis gets wrong. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <failOnWarning>true</failOnWarning>
+          <ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependency>junit:junit:*</ignoredUnusedDeclaredDependency>
+            <ignoredUnusedDeclaredDependency>org.antlr:stringtemplate:*</ignoredUnusedDeclaredDependency>
+          </ignoredUnusedDeclaredDependencies>
+        </configuration>
       </plugin>
     </plugins>
   </build>
