@@ -20,6 +20,9 @@
 
 module com.io7m.jnfp.core
 {
+  requires static org.osgi.annotation.bundle;
+  requires static org.osgi.annotation.versioning;
+
   requires com.io7m.junreachable.core;
   requires com.io7m.junsigned.core;
 
