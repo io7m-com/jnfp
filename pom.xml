@@ -13,7 +13,7 @@
 
   <groupId>com.io7m.jnfp</groupId>
   <artifactId>com.io7m.jnfp</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1-SNAPSHOT</version>
 
   <packaging>pom</packaging>
   <name>com.io7m.jnfp</name>
@@ -26,7 +26,7 @@
   </modules>
 
   <properties>
-    <io7m.api.previousVersion>1.0.0</io7m.api.previousVersion>
+    <io7m.api.previousVersion>3.0.0</io7m.api.previousVersion>
   </properties>
 
   <licenses>
