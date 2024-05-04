@@ -1,0 +1,33 @@
+
+## jnfp
+
+Java functions to convert between floating point and _normalized fixed point_
+values.
+
+## Features
+
+* Conversion between unsigned normalized fixed-point numbers and floating point numbers.
+* Conversion between signed normalized fixed-point numbers and floating point numbers.
+* High coverage test suite.
+* [OSGi-ready](https://www.osgi.org/)
+* [JPMS-ready](https://en.wikipedia.org/wiki/Java_Platform_Module_System)
+* ISC license.
+
+## Usage
+
+Convert a floating point value to its 32-bit unsigned normalized fixed point
+representation:
+
+```
+var r = NFPUnsignedFloatLong.toUnsignedNormalized(0.25, 32);
+```
+
+Convert a 32-bit unsigned normalized fixed point value to its floating point
+representation:
+
+```
+var s = NFPUnsignedFloatLong.fromUnsignedNormalized(r, 32);
+```
+
+Classes exist for signed, unsigned, `int`, `long`, `float`, and `double`
+specializations.
